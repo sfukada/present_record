@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get 'presents' => 'presents#index'
-  get 'tweets/new' => 'presents#new'
+  devise_for :users
+  root 'presents#index'
+  get 'presents' => 'tweets#index'
+  get 'presents/new' => 'presents#new'
 end

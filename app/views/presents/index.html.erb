@@ -1,3 +1,9 @@
-<div class ="contents row">
-  
+<div class="contents row" >
+    <% @presents.each do |present| %>
+      <div class="content_post" style="background-image: url(<%= present.image %>);">
+        <%= simple_format(present.text) %>
+        <span class="name"><%= present.product_name %></span>
+      </div>
+    <% end %>
+  <%= paginate(@presents) %>
 </div>

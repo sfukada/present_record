@@ -1,0 +1,69 @@
+<%= form_for (@present) do |f| %>
+
+  <div class="field">
+    <%= f.label :user_type, "投稿の種類" %>
+    <%= f.radio_button :user_type, 1 %> 送る/送った
+    <%= f.radio_button :user_type, 2 %>貰った
+  </div>
+
+  <div class="field">
+    <%= f.label :product_name, "Gift item" %>
+    <%= f.text_field :product_name, placeholder: 'Gift item', value: ''%>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "image" %>
+    <%= f.text_field :image, placeholder: 'image', value: '' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product_price, "Price" %>
+    <%= f.number_field :product_price, placeholder: 'Price', value: '' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :who_from, "誰からのプレゼントですか？" %>
+    <%= f.radio_button :who_from, 1 %> 彼氏
+    <%= f.radio_button :who_from, 2 %> 彼女
+    <%= f.radio_button :who_from, 3 %> 夫
+    <%= f.radio_button :who_from, 4 %> 妻
+    <%= f.radio_button :who_from, 5 %> 父
+    <%= f.radio_button :who_from, 6 %> 母
+    <%= f.radio_button :who_from, 7 %> 息子
+    <%= f.radio_button :who_from, 8 %> 娘
+    <%= f.radio_button :who_from, 9 %> 友達
+    <%= f.radio_button :who_from, 10 %> 同僚
+    <%= f.radio_button :who_from, 11 %> その他
+  </div>
+
+  <div class="field">
+    <%= f.label :who_from_other, "その他を選択された方はこちらに記入してください" %>
+    <%= f.text_field :who_from_other, placeholder: 'その他', value: '' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :who_from, "誰へのプレゼントですか？" %>
+    <%= f.radio_button :who_for, 1 %> 彼氏
+    <%= f.radio_button :who_for, 2 %> 彼女
+    <%= f.radio_button :who_for, 3 %> 夫
+    <%= f.radio_button :who_for, 4 %> 妻
+    <%= f.radio_button :who_for, 5 %> 父
+    <%= f.radio_button :who_for, 6 %> 母
+    <%= f.radio_button :who_for, 7 %> 息子
+    <%= f.radio_button :who_for, 8 %> 娘
+    <%= f.radio_button :who_for, 9 %> 友達
+    <%= f.radio_button :who_for, 10 %> 同僚
+    <%= f.radio_button :who_for, 11 %> その他
+  </div>
+
+  <div class="field">
+    <%= f.label :who_for_other, "その他を選択された方はこちらに記入してください" %>
+    <%= f.text_field :who_for_other, placeholder: 'その他', value: '' %>
+  </div>
+
+  
+
+  <div class="actions">
+    <%= f.submit "登録する" %>
+  </div>
+<% end %>
