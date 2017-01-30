@@ -22,7 +22,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :who_from, "誰からのプレゼントですか？" %>
+    <%= f.label :who_from, "誰からのプレゼントですか？" %><br>
     <%= f.radio_button :who_from, 1 %> 彼氏
     <%= f.radio_button :who_from, 2 %> 彼女
     <%= f.radio_button :who_from, 3 %> 夫
@@ -42,7 +42,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :who_from, "誰へのプレゼントですか？" %>
+    <%= f.label :who_from, "誰へのプレゼントですか？" %><br>
     <%= f.radio_button :who_for, 1 %> 彼氏
     <%= f.radio_button :who_for, 2 %> 彼女
     <%= f.radio_button :who_for, 3 %> 夫
@@ -56,14 +56,40 @@
     <%= f.radio_button :who_for, 11 %> その他
   </div>
 
-  <div class="field">
+ <div class="field">
     <%= f.label :who_for_other, "その他を選択された方はこちらに記入してください" %>
     <%= f.text_field :who_for_other, placeholder: 'その他', value: '' %>
   </div>
 
-  
+  <div class="field">
+    <%= f.label :when, "何のプレゼントですか？" %><br>
+    <%= f.radio_button :when, 1 %> 誕生日
+    <%= f.radio_button :when, 2 %> 記念日
+    <%= f.radio_button :when, 3 %> 歓送迎
+    <%= f.radio_button :when, 4 %> お土産
+    <%= f.radio_button :when, 5 %> お祝い
+    <%= f.radio_button :when, 6 %> お礼
+    <%= f.radio_button :when, 7 %> その他
+  </div>
+
+  <div class="field">
+    <%= f.label :when_other, "その他を選択された方はこちらに記入してください" %>
+    <%= f.text_field :when_other, placeholder: 'その他', value: '' %>
+  </div>
+
+  <div style="margin: 8px 0">
+    <%= f.label :評価, , style: { 'margin-right' => 8 } %>
+    <%= f.number_field :rate, placeholder: '5段階評価', value: 1, max: 5, min: 1, html: { class: "search__query", style: 'text-align: right;' } %>
+          </div>
+  <div style="margin: 8px 0">
+    <%= f.text_area :text, placeholder: '感想、エピソードなど', style: 'width: 100%;height: 300px;' %>
+  </div>
 
   <div class="actions">
-    <%= f.submit "登録する" %>
+    <div class="col10 push1">
+      <%= button_tag type: "submit", class: "btn btn--block" do %>
+      投稿する<i class="icon-arrow-right"></i>
+      <% end %>
+    </div>
   </div>
 <% end %>
