@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+
+/* =Reset default browser CSS.
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a img{border: 0;}
+figure{margin:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+/* -------------------------------------------------------------- */
+
+body{
+color:#333;
+font:12px verdana,"ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+line-height:1.5;
+background:#f8f4f1;
+-webkit-text-size-adjust: none;
+}
+
+
+
+
+/* リンク設定
+------------------------------------------------------------*/
+a{color:#797c7b;text-decoration:none;}
+a:hover{color:#515353;}
+a:active, a:focus{outline:0;}
+
+
+/* 全体
+------------------------------------------------------------*/
+#wrapper,#header{
+margin:0 auto;
+padding:0 1%;
+width:98%;
+position:relative;
+background:#fff;
+box-shadow:1px 2px 3px #ccc;
+}
+
+
+/*************
+/* ヘッダー
+*************/
+#header{overflow:hidden;}
+* html #header{height:1%;}
+
+#header h1{
+padding-bottom:10px;
+font-size:12px;
+line-height:1.2;
+font-weight:normal;
+}
+
+.logo{
+height: auto;
+width: 100%;
+float:left;
+padding:20px 0 0;
+background-color: #fff;
+}
+
+.logo a{
+font-size:20px;
+font-weight:bold;
+line-height:1;
+}
+
+.logo span{
+font-size:12px;
+font-weight:normal;
+}
+
+/**************************
+/* 投稿
+**************************/
+.gridWrapper{
+padding-bottom:20px;
+overflow: hidden;
+}
+
+* html .gridWrapper{height:1%;}
+  
+.grid{
+float: left;
+background:#fff;
+border-bottom:4px solid #515353;
+background-size: cover;
+background-position: center center
+max-width: 100%;
+box-shadow:0 0 3px rgba(0,0,0,.2);
+display: table;
+width: 100px; /* minimum width */
+*width: auto
+}
+
+.grid h3{
+padding:20px 5px;
+text-align:center;
+}
+
+.grid p{
+padding:5px 10px;
+text-align:center;
+}
+
+.gridWrapper img{
+max-width:100%
+max-height:100%;
+margin: o auto;
+}
+
+/**************************
+/* MENU
+**************************/
+
+.list6 dl.acordion{
+ margin: 0 10px 0 10px;
+ }
+ .list6 dt.trigger {
+ background: #9bd8ff -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b9e4ff), to(#62b5ea));
+ background: #9bd8ff linear-gradient(#b9e4ff, #62b5ea);
+ border-radius: 10px;
+ text-align: left;
+ border: 1px solid #ccc;
+ color: #000;
+ margin-bottom: 0;
+ padding: 10px;
+ }
+ .list6 dt.active{
+ border-radius: 10px 10px 0 0;
+ }
+ .list6 dt.trigger span.open-close {
+ background: url(point_plus.png) no-repeat right top;
+ float: right;
+ width: 20px;
+ height: 20px;
+ text-indent: -9999em;
+ }
+ .list6 dt.active span.open-close {
+ background: url(point_none.png) no-repeat right top;
+ float: right;
+ width: 20px;
+ height: 20px;
+ }   
+ .list6 dd.acordion_tree{
+ padding: 10px;
+ background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f0f0f0));
+ background: #9bd8ff linear-gradient(#fff, #f0f0f0);
+ border: 1px solid #ccc;
+ border-top: none;
+ }

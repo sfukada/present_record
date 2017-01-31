@@ -1,9 +1,13 @@
-<div class="contents row" >
-    <% @presents.each do |present| %>
-      <div class="content_post" style="background-image: url(<%= present.image %>);">
-        <%= simple_format(present.text) %>
-        <span class="name"><%= present.product_name %></span>
-      </div>
-    <% end %>
+<div id="wrapper">
+  <section class="gridWrapper">
+  <% @presents.each do |present| %>
+      <article class="grid">
+        <p class="img"><img src="<%= present.image %>" width="180" height="180" alt=""></p>
+        <h3><%= present.product_name %></h3>
+        <p><%= present.text %></p>
+        <p class="readmore"><%= link_to "詳細", present_path(present.id), method: :get %></p>
+      </article>
+  <% end%>
   <%= paginate(@presents) %>
-</div>
+  </section>
+  </div>

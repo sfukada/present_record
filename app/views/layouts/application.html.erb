@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="ja">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="Present record">
+  <meta name="keywords" content="">
   <title>PresentRecord</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-<header class="header">
-    <div class="header__bar row">
-      <h1 class="grid-6"><a href="/">Present record</a></h1>
-      <% if user_signed_in? %>
-        <div class="user_nav grid-6">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          <a class="post" href="/presents/new">投稿する</a>
-        </div>
-      <% else %>
-        <div class="grid-6">
-          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-        </div>
-      <% end %>
-    </div>
+<header id="header">
+  <div class="logo">
+      <h1>プレゼントで毎日に幸せを</h1>
+      <a href="/">Present record<br><span>I wish you be always filled with Happiness!</span></a>
+  </div>
+  <nav id="mainNav">
+   <section class="list6">
+      <dl class="acordion">
+      <dt class="trigger">MENU<span class="open-close">open</span></dt>
+      <dd class="acordion_tree">
+      <div class="panel">
+        <ul>
+          <li class="active"><a href="/">トップページ</a></li>
+          <li><a href="/presents/serch">検索</a></li>
+          <% if user_signed_in? %>
+          <li><a href="/presents/new">投稿する</a></li>
+          <li><a href="/users/<%= current_user.id %>"><%= current_user.nickname %>のマイページ</a></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+          <li><%= link_to "ログイン", new_user_session_path, :class => 'post' %><br><span>Login</span></a></li>
+          <li><%= link_to "新規登録", new_user_registration_path, :class => 'post' %><br><span>registration</span></a></li>
+          <% end %>
+        </ul>
+      </div>
+      </dd>
+      </dl>
+   </section>
+    </nav>
   </header>
 
 <%= yield %>
