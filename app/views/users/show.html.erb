@@ -1,0 +1,29 @@
+<div class="user_page">
+  <header class="user_page-header">
+    <div class="yjContainer">
+      <a href="">
+        <div class="user_nickname">
+        <h2><%= current_user.nickname%> <span>さんのマイページ</span></h2>
+      </a>
+    </div>
+  </header>
+  <div class="pt1em pb1em" id="contents">  <div id="main_cnt_wrapper">
+    <div id="yjContentsBody">
+      <div class="yjContainer">
+        <ul class="user_page-contents">
+        <% current_user.presents.each do |present| %>
+          <li style="background-image: url(<%= present.image %>)">
+            <div class="meta">
+              <header>
+                <div class="title"><%= present.product_name %></div>
+                <span class="star"><span class="rating-star"><i class="star-actived rate-<%=  present.rate %>0"></i></span></span>
+              </header>
+              <div class="user_review"><%= present.text%></div>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+
+      </div>
+    </div>
+  </div>

@@ -11,24 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170127100229) do
+ActiveRecord::Schema.define(version: 20170205122907) do
 
   create_table "presents", force: :cascade do |t|
-    t.integer  "user_id",        limit: 4
-    t.integer  "user_type",      limit: 4
-    t.text     "product_name",   limit: 65535
-    t.text     "image",          limit: 65535
-    t.integer  "product_price",  limit: 4
-    t.integer  "who_from",       limit: 4
-    t.text     "who_from_other", limit: 65535
-    t.integer  "who_for",        limit: 4
-    t.text     "who_for_other",  limit: 65535
-    t.integer  "when",           limit: 4
-    t.text     "when_other",     limit: 65535
-    t.integer  "rate",           limit: 4
-    t.text     "text",           limit: 65535
+    t.integer  "user_id",            limit: 4
+    t.integer  "user_type",          limit: 4
+    t.text     "product_name",       limit: 65535
+    t.text     "image",              limit: 65535
+    t.integer  "product_price",      limit: 4
+    t.integer  "who_from",           limit: 4
+    t.text     "who_from_other",     limit: 65535
+    t.integer  "who_for",            limit: 4
+    t.text     "who_for_other",      limit: 65535
+    t.integer  "when",               limit: 4
+    t.text     "when_other",         limit: 65535
+    t.integer  "rate",               limit: 4
+    t.text     "text",               limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

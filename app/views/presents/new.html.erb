@@ -13,8 +13,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :image, "image" %>
-    <%= f.text_field :image, placeholder: 'image', value: '' %>
+  <%= f.file_field :image %>
   </div>
 
   <div class="field">
@@ -43,7 +42,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :who_from, "誰へのプレゼントですか？" %><br>
+    <%= f.label :who_for, "誰へのプレゼントですか？" %><br>
     <%= f.radio_button :who_for, 1 %> 彼氏
     <%= f.radio_button :who_for, 2 %> 彼女
     <%= f.radio_button :who_for, 3 %> 夫
