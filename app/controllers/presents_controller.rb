@@ -16,7 +16,7 @@ class PresentsController < ApplicationController
 
   def show
     @present = Present.find(params[:id])
-    @items = RakutenWebService::Ichiba::Item.search(keyword: @present.product_name)
+    @items = RakutenWebService::Ichiba::Item.search(keyword: "#{@present.product_name}")
   end
 
   def search

@@ -1,6 +1,11 @@
+require 'net/http'
+require 'uri'
+require 'pry'
+require 'json'
+
 RakutenWebService.configuration do |c|
     # (Required) Appliction ID for your application.
-c.application_id = 'ea98685bdbcccda2554f6d33e4d795913cd90adc'
+c.application_id = '1014469926988920301'
 
 # (Optional) Affiliate ID for your Rakuten account.
 c.affiliate_id = '156df8a0.daded855.156df8a1.7052e6e4' # default: nil

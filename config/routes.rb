@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'presents#index'
   get 'presents' => 'presents#index'
   resources :presents
+  get 'rakuten_search' => 'presents#show'
 end

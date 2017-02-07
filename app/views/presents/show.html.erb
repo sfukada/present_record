@@ -1,0 +1,29 @@
+<div id="wrapper">
+  <section class="gridWrapper">
+      <article class="grid">
+        <p class="img"><img src="<%= @present.image %>" width="180" height="180" alt=""></p>
+        <h3><%= @present.product_name %></h3>
+        <p><%= @present.text %></p>
+      </article>
+  <table>
+  <thead>
+    <tr>
+      <th>商品名</th>
+      <th>価格</th>
+      <th>画像</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% if @items.present? %>
+   <% @items.first(3).each do |item| %>
+      <tr>
+        <td><%= link_to item.name, "#{item.url}" %></td>
+        <td align="right"><%= number_with_delimiter(item.price) %>円</td>
+        <td><%= image_tag item["smallImageUrls"][0]["imageUrl"] %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+</section>
+</div>
